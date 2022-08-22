@@ -1,0 +1,7 @@
+.wrapper {
+    background-color: #001e30;
+    color: black;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
