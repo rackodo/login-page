@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap');
+
+.container {
+    font-family: 'Baloo Thambi 2', cursive;
+    min-width: 360px;
+
+    /* width: 30vw; */
+    /* height: 60vh; */
+    display: block;
+    
+    border: 2px solid #5295b4;
+    margin: auto;
+    border-radius: 50px;
+    padding: 30px 25px;
+}
+
+.container h1 {
+    font-size: 48px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+    color: var(--primary);
+}
+
+.container input {
+    width: 100%;
+}
+
+.container label {
+    color: var(--primary);
+}
+
+.container input[type="text"], .container input[type="password"] {
+    border: 2px solid var(--primary);
+    background-color: var(--tertiary);
+    color: var(--secondary);
+    padding: 10px;
+    font-size: 18px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px 0px var(--primary);
+    text-align: center;
+    transition-property: box-shadow;
+    transition-duration: 0.25s;
+}
+
+.container input[type="text"]:focus, .container input[type="password"]:focus, .container input[type="text"]:hover, .container input[type="password"]:hover {
+    outline: none;
+    box-shadow: 0px 0px 20px 0px var(--primary);
+}
+
+.container input[type=submit] {
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--primary);
+    color: var(--tertiary);
+
+    transition-property: background-color, color;
+    transition-duration: 0.25s;
+}
+
+.container input[type=submit]:hover {
+    cursor: pointer;
+    background-color: var(--tertiary);
+    color: var(--secondary);
+}
+
+.passwordField {
+    display: flex;
+}
+
+.togglePassword {
+    border: 2px solid var(--primary);
+    background-color: var(--tertiary);
+    color: var(--secondary);
+    padding: 10px;
+    font-size: 18px;
+    width: 46px;
+    height: 46px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px 0px var(--primary);
+    aspect-ratio: 1 / 1;
+    padding: 0px;
+    margin-right: 10px;
+
+    transition-property: box-shadow;
+    transition-duration: 0.25s;
+}
+
+.togglePassword:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 20px 0px var(--primary);
+}
+
+.pulse {
+    animation-name: pulse;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}
+
+.flush {
+    animation-name: flush;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes pulse {
+    0% {
+    }
+    50% {
+        box-shadow: 0px 0px 20px 5px var(--primary);
+        transform: scale(1.25) rotate(5deg);
+    }
+    100% {
+    }
+}
+
+@keyframes flush {
+    0% {
+        color: var(--tertiary);
+    }
+    50% {
+        color: var(--primary);
+        background-color: var(--primary);
+    }
+    100% {
+        color: var(--secondary);
+    }
+}
