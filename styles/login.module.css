@@ -87,6 +87,8 @@
     padding: 0px;
     margin-right: 10px;
 
+    vertical-align: middle;
+
     transition-property: box-shadow;
     transition-duration: 0.25s;
 }
