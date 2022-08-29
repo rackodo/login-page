@@ -23,7 +23,7 @@
     color: var(--primary);
 }
 
-.container input {
+.container form input {
     width: 100%;
 }
 
@@ -48,6 +48,9 @@
 .container input[type="text"]:focus, .container input[type="password"]:focus, .container input[type="text"]:hover, .container input[type="password"]:hover {
     outline: none;
     box-shadow: 0px 0px 20px 0px var(--primary);
+
+    transition-property: background-color, color, border-color, box-shadow;
+    transition-duration: 0.25s;
 }
 
 .container input[type=submit] {
@@ -63,10 +66,24 @@
     transition-duration: 0.25s;
 }
 
-.container input[type=submit]:hover {
+.container form input:invalid {
+    --primary: #b45252;
+    --secondary: #e28080;
+    --tertiary: #5e1919;
+
+    transition-property: background-color, color, border-color, box-shadow;
+    transition-duration: 0.25s;
+}
+
+.container form:not(:invalid) input[type=submit]:hover {
     cursor: pointer;
     background-color: var(--tertiary);
     color: var(--secondary);
+}
+
+.container form:invalid input[type=submit] {
+    background-color: #e28080;
+    color: #5e1919;
 }
 
 .passwordField {
