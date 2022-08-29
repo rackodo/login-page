@@ -30,21 +30,21 @@ function Login({ title }) {
             toggle.innerHTML = '<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="lock" class="svg-inline--fa fa-lock " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M80 192V144C80 64.47 144.5 0 224 0C303.5 0 368 64.47 368 144V192H384C419.3 192 448 220.7 448 256V448C448 483.3 419.3 512 384 512H64C28.65 512 0 483.3 0 448V256C0 220.7 28.65 192 64 192H80zM144 192H304V144C304 99.82 268.2 64 224 64C179.8 64 144 99.82 144 144V192z"></path></svg>'
         }
     }
-
+    
     return(
         <div className={styles.container}>
             <h1>{title}</h1>
-            <form>
+            <form id="login-form">
                 <label htmlFor="username">Username</label><br />
-                <input id="username" type="text" /><br/>
+                <input id="username" type="text" required /><br/>
                 <label htmlFor="password">Password</label><br />
                 <div className={styles.passwordField}>
                     <button tabIndex="0" id="togglePassword" className={styles.togglePassword} onMouseDown={handleHidden}  type="button">
                         <FontAwesomeIcon icon={faLock} />
                     </button>
-                    <input className="password" id="password" type="password" />
+                    <input className="password" id="password" type="password" required />
                 </div>
-                <input type="submit" value="Login" />
+                <input id="submit" type="submit" value="Login" />
             </form>
         </div> 
     )
