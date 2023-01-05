@@ -9,9 +9,6 @@
 			"name": "Open dev server",
 			"request": "launch",
 			"type": "node-terminal"
-		},
-		{
-			
 		}
 	]
 }
